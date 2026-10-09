@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function myFunction(){
+        const span = document.getElementById("mySpan")
+        const h2 = document.getElementById("myH2")
+        h2.insertAdjacentElement("afterend", span)
+    }
+    function myFunction1(){
+        const span = document.getElementById("mySpan")
+        const h2 = document.getElementById("myH2")
+        h2.insertAdjacentElement("afterbegin", span)
+    }
+    function myFunction2(){
+        const span = document.getElementById("mySpan")
+        const h2 = document.getElementById("myH2")
+        h2.insertAdjacentElement("beforeend", span)
+    }
+    function myFunction3(){
+        const span = document.getElementById("mySpan")
+        const h2 = document.getElementById("myH2")
+        h2.insertAdjacentElement("beforebegin", span)
+    }
+</script>
+<body>
+    <h2>O método insertAdjacentElement()</h2>
+
+    <button onclick="myFunction()">Mover afterend</button>
+    <button onclick="myFunction1()">Mover aftebegin</button>
+    <button onclick="myFunction2()">Mover beforeend</button>
+    <button onclick="myFunction3()">Mover beforebegin</button>
+
+    <p>Clique "Move" para inserir o span vermelho depois do header</p>
+    <span id="mySpan" style="color: red;">Meu span</span>
+    <h2 id="myH2" style="background-color: yellow;">Meu header</h2>
+    
+</body>
+</html>

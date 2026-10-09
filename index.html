@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #minhaDiv{
+        background: purple;
+        color: white;
+        width: 50%;
+        padding: 20px;
+    }
+</style>
+<script>
+    function minhaFuncao(){
+        const div = document.getElementById("minhaDiv")
+        div.after("DEPOIS DA DIV")
+    }
+    function minhaFuncao2(){
+        const div = document.getElementById("minhaDiv")
+        const h3 = document.createElement("h3")
+        div.append(h3)
+        h3.append("MEIO DA DIV")
+    }
+    function minhaFuncao3(){
+        const div = document.getElementById("minhaDiv")
+        div.before("ANTES DA DIV")
+    }
+</script>
+
+<body>
+    <h1>Elemento after() append() before()</h1>
+    <div id="minhaDiv">AQUI É A DIV</div>
+    <p>Clique para inserir depois da DIV:</p>
+    <button onclick="minhaFuncao()">AFTER</button>
+    <button onclick="minhaFuncao2()">APPEND</button>
+    <button onclick="minhaFuncao3()">BEFORE</button>
+</body>
+
+</html>
